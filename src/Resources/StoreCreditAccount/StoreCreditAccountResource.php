@@ -2,8 +2,8 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\StoreCredit\Resources\StoreCreditAccount;
 
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Schemas\Schema;
 use Filament\Tables\Table;
 use JeffersonGoncalves\Commerce\StoreCredit\Models\StoreCreditAccount;
 use JeffersonGoncalves\FilamentCommerce\StoreCredit\CommerceStoreCreditPlugin;
@@ -26,9 +26,9 @@ class StoreCreditAccountResource extends Resource
         }
     }
 
-    public static function form(Schema $schema): Schema
+    public static function form(Form $form): Form
     {
-        return StoreCreditAccountForm::configure($schema);
+        return StoreCreditAccountForm::configure($form);
     }
 
     public static function table(Table $table): Table
