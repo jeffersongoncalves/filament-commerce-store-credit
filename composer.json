@@ -1,0 +1,69 @@
+{
+    "name": "jeffersongoncalves/filament-commerce-store-credit",
+    "description": "Filament v5 admin resources for the Laravel Commerce store-credit module.",
+    "keywords": [
+        "laravel",
+        "filament",
+        "filament-plugin",
+        "commerce",
+        "store-credit"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jefferson Gonçalves",
+            "email": "gerson.simao.92@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "filament/filament": "^5.3",
+        "jeffersongoncalves/filament-commerce-core": "self.version",
+        "jeffersongoncalves/laravel-commerce-store-credit": "@dev",
+        "spatie/laravel-package-tools": "^1.14.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.0",
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^3.0|^4.0",
+        "pestphp/pest-plugin-laravel": "^3.0|^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JeffersonGoncalves\\FilamentCommerce\\StoreCredit\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JeffersonGoncalves\\FilamentCommerce\\StoreCredit\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "format": "vendor/bin/pint",
+        "test": "vendor/bin/pest"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JeffersonGoncalves\\FilamentCommerce\\StoreCredit\\FilamentCommerceStoreCreditServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "homepage": "https://github.com/jeffersongoncalves/filament-commerce",
+    "support": {
+        "issues": "https://github.com/jeffersongoncalves/filament-commerce/issues",
+        "source": "https://github.com/jeffersongoncalves/filament-commerce"
+    }
+}
