@@ -2,17 +2,16 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\StoreCredit\Resources\StoreCreditAccount\Schemas;
 
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
-use Filament\Schemas\Components\Section;
-use Filament\Schemas\Schema;
+use Filament\Forms\Form;
 
 class StoreCreditAccountForm
 {
-    public static function configure(Schema $schema): Schema
+    public static function configure(Form $form): Form
     {
-        return $schema
-            ->columns(null)
-            ->components([
+        return $form
+            ->schema([
                 Section::make('Details')
                     ->schema([
                         TextInput::make('customer_id'),
